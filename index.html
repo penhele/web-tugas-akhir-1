@@ -59,21 +59,29 @@
                 </p>
             </article>
 
-            <div id="infoContainer"></div>
+            <div id="infoContainer">
+
+            </div>
 
             <script>
                 const data = [
                     {
-                        teks: "Geografis",
+                        title: "Geografis",
                         img: "assets/img/sidoarjo-geografis.jpg",
                         paraf1: "Kabupaten Sidoarjo terletak di bagian tenggara Provinsi Jawa Timur, Indonesia, dan berbatasan langsung dengan Kota Surabaya di sebelah utara. Secara geografis, Sidoarjo memiliki luas sekitar 1.343,53 km² dan terbagi menjadi beberapa kecamatan yang sebagian besar terletak di pesisir utara Pulau Jawa. Kabupaten ini dikelilingi oleh laut di sebelah utara, dengan wilayah yang sebagian besar dataran rendah, serta memiliki sejumlah sungai besar, seperti Sungai Brantas, yang mengalir melalui daerah ini. Letak Sidoarjo yang strategis, dekat dengan Surabaya sebagai pusat ekonomi dan perdagangan, membuatnya memiliki akses yang baik menuju berbagai sektor industri, transportasi, serta kawasan wisata.",
                         paraf2: "",
                     },
                     {
-                        teks: "Wisata",
+                        title: "Wisata",
                         img: "assets/img/sidoarjo-wisata.jpg",
                         paraf1: "Lumpur Lapindo, yang terletak di Kabupaten Sidoarjo, Jawa Timur, merupakan destinasi wisata unik yang menyimpan cerita sejarah, bencana, dan pembelajaran. Tempat ini menjadi saksi tragedi geologi besar pada tahun 2006, ketika semburan lumpur panas menenggelamkan desa-desa di sekitarnya, memaksa ribuan warga mengungsi. Kini, area tersebut telah berkembang menjadi lokasi wisata yang menawarkan pengalaman berbeda. Wisatawan dapat melihat langsung bentangan lumpur yang terus aktif, sisa-sisa tanggul penahan, dan patung-patung yang menggambarkan dampak bencana ini.",
                         paraf2: "Selain itu, terdapat tur edukasi yang menjelaskan fenomena geologi di balik semburan lumpur, serta dampaknya terhadap masyarakat dan lingkungan. Banyak pengunjung yang datang untuk mengenang peristiwa tersebut, mengambil foto berlatar pemandangan lumpur yang luas, atau mencoba menaiki ojek motor yang tersedia untuk mengelilingi area. Lumpur Lapindo kini tidak hanya menjadi pengingat akan tragedi besar, tetapi juga simbol ketangguhan dan adaptasi masyarakat setempat yang berusaha bangkit dari keterpurukan.",
+                    },
+                    {
+                        title: "Kuliner",
+                        img: "assets/img/sidoarjo-kuliner.jpeg",
+                        paraf1: "Kupang Lontong Sidoarjo adalah salah satu kuliner khas dari Sidoarjo, Jawa Timur, yang terkenal dengan kelezatannya. Hidangan ini terdiri dari kupang, yaitu kerang kecil yang diolah dengan bumbu khas, kemudian disajikan bersama lontong (nasi yang dibungkus daun pisang dan dikukus). Kupang yang digunakan dalam hidangan ini memiliki rasa manis dan gurih yang menyatu sempurna dengan bumbu pedas yang kaya rempah, menciptakan perpaduan rasa yang menggugah selera. Biasanya, kupang lontong disajikan dengan sambal, petis, dan taburan bawang goreng, yang menambah cita rasa pada setiap suapannya. Hidangan ini sangat populer di kalangan warga lokal Sidoarjo dan sering dijadikan pilihan untuk sarapan atau makan malam. Keunikan dan kekayaan rasa yang ditawarkan oleh kupang lontong menjadikannya sebagai salah satu hidangan yang patut dicoba bagi siapa saja yang berkunjung ke Sidoarjo",
+                        paraf2: "",
                     },
                 ];
 
@@ -81,8 +89,8 @@
 
                 data.forEach((item) => {
                     container.innerHTML += `
-                        <article class="card">
-                            <h2>${item.teks}</h2>
+                        <article class="card" id=${item.title.toLowerCase()}>
+                            <h2>${item.title}</h2>
                             <img src="${item.img}" alt="${item.teks}" class="featured-image">
                             <p>${item.paraf1}</p>
                             <p>${item.paraf2}</p>
