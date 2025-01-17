@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#sejarah">Sejarah</a>
+                </li>
+                <li>
+                    <a href="#geografis">Geografis</a>
+                </li>
+                <li>
+                    <a href="#wisata">Wisata</a>
+                </li>
+                <li>
+                    <a href="#kuliner">Kuliner</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <article id="sejarah" class="card">
+                <h2>Sejarah</h2>
+                <div class="img">
+                    <img src="assets/img/sidoarjo-icon1.jpg" alt="">
+                    <img src="assets/img/sidoarjo-icon2.jpg" alt="" class="img-hidden">
+                </div>
+                <p>
+                    Sidoarjo, yang terletak di sebelah selatan Surabaya, memiliki sejarah yang panjang sejak zaman
+                    kerajaan Majapahit. Pada abad ke-14, daerah ini merupakan bagian dari wilayah kerajaan yang berpusat
+                    di Trowulan. Seiring berjalannya waktu, Sidoarjo menjadi salah satu pusat perdagangan penting di
+                    pesisir utara Jawa, dengan keberadaan pelabuhan yang mendukung aktivitas ekonomi dan budaya. Pada
+                    masa kolonial, Sidoarjo mengalami perkembangan pesat dalam bidang pertanian, terutama produksi padi
+                    dan tebu, yang menjadi komoditas utama
+                </p>
+                <p>Pada abad ke-20, Sidoarjo semakin berkembang dengan pesat setelah adanya industrialisasi dan
+                    urbanisasi. Setelah kemerdekaan Indonesia, Sidoarjo menjadi bagian dari Provinsi Jawa Timur dan
+                    terus berkembang menjadi kawasan industri yang penting, terutama di bidang manufaktur dan
+                    petrokimia. Salah satu peristiwa besar yang mempengaruhi sejarah Sidoarjo adalah letusan lumpur
+                    Lapindo pada tahun 2006, yang mengubah lanskap daerah ini secara signifikan. Meskipun menghadapi
+                    tantangan tersebut, Sidoarjo tetap menjadi daerah yang berkembang dengan pesat, baik dari segi
+                    ekonomi maupun infrastruktur.
+                </p>
+            </article>
+
+            <div id="infoContainer"></div>
+
+            <script>
+                const data = [
+                    {
+                        teks: "Geografis",
+                        img: "assets/img/sidoarjo-geografis.jpg",
+                        paraf1: "Kabupaten Sidoarjo terletak di bagian tenggara Provinsi Jawa Timur, Indonesia, dan berbatasan langsung dengan Kota Surabaya di sebelah utara. Secara geografis, Sidoarjo memiliki luas sekitar 1.343,53 km² dan terbagi menjadi beberapa kecamatan yang sebagian besar terletak di pesisir utara Pulau Jawa. Kabupaten ini dikelilingi oleh laut di sebelah utara, dengan wilayah yang sebagian besar dataran rendah, serta memiliki sejumlah sungai besar, seperti Sungai Brantas, yang mengalir melalui daerah ini. Letak Sidoarjo yang strategis, dekat dengan Surabaya sebagai pusat ekonomi dan perdagangan, membuatnya memiliki akses yang baik menuju berbagai sektor industri, transportasi, serta kawasan wisata.",
+                        paraf2: "",
+                    },
+                    {
+                        teks: "Wisata",
+                        img: "assets/img/sidoarjo-wisata.jpg",
+                        paraf1: "Lumpur Lapindo, yang terletak di Kabupaten Sidoarjo, Jawa Timur, merupakan destinasi wisata unik yang menyimpan cerita sejarah, bencana, dan pembelajaran. Tempat ini menjadi saksi tragedi geologi besar pada tahun 2006, ketika semburan lumpur panas menenggelamkan desa-desa di sekitarnya, memaksa ribuan warga mengungsi. Kini, area tersebut telah berkembang menjadi lokasi wisata yang menawarkan pengalaman berbeda. Wisatawan dapat melihat langsung bentangan lumpur yang terus aktif, sisa-sisa tanggul penahan, dan patung-patung yang menggambarkan dampak bencana ini.",
+                        paraf2: "Selain itu, terdapat tur edukasi yang menjelaskan fenomena geologi di balik semburan lumpur, serta dampaknya terhadap masyarakat dan lingkungan. Banyak pengunjung yang datang untuk mengenang peristiwa tersebut, mengambil foto berlatar pemandangan lumpur yang luas, atau mencoba menaiki ojek motor yang tersedia untuk mengelilingi area. Lumpur Lapindo kini tidak hanya menjadi pengingat akan tragedi besar, tetapi juga simbol ketangguhan dan adaptasi masyarakat setempat yang berusaha bangkit dari keterpurukan.",
+                    },
+                ];
+
+                const container = document.getElementById("infoContainer");
+
+                data.forEach((item) => {
+                    container.innerHTML += `
+                        <article class="card">
+                            <h2>${item.teks}</h2>
+                            <img src="${item.img}" alt="${item.teks}" class="featured-image">
+                            <p>${item.paraf1}</p>
+                            <p>${item.paraf2}</p>
+                            </article>
+                        `;
+                });
+            </script>
+        </div>
+        <aside>
+            <article class="profile card">
+                <header>
+                    <figure>
+                        <img src="assets/img/sidoarjo-logo.png" alt="">
+                        <figcaption>Lambang</figcaption>
+                    </figure>
+                </header>
+                <section>
+                    <h3>Informasi Lainnya</h3>
+                    <table>
+                        <tr>
+                            <th>Negara</th>
+                            <td>Indonesia</td>
+                        </tr>
+                        <tr>
+                            <th>Hari jadi</th>
+                            <td>12 November 1825</td>
+                        </tr>
+                        <tr>
+                            <th>Luas Total</th>
+                            <td>1.343,53 km<sup>2</sup></td>
+                        </tr>
+                        <tr>
+                            <th>Bahasa Daerah</th>
+                            <td>Jawa</td>
+                        </tr>
+                        <tr>
+                            <th>Kode Telepon</th>
+                            <td>+62 31</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </aside>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
